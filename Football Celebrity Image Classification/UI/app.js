@@ -50,9 +50,28 @@ function init() {
                 let classDictionary = match.class_dictionary;
                 for(let personName in classDictionary) {
                     let index = classDictionary[personName];
-                    let proabilityScore = match.class_probability[index];
+                    let probabilityScore = match.class_probability[index];
+                    switch(personName) {
+                        case "Cristiano Ronaldo" :
+                            personName="cristiano_ronaldo";
+                            break;
+                        case "Kylian Mbappe" :
+                            personName="kylian_mbappe";
+                            break;
+                        case "Lionel Messi" :
+                            personName="lionel_messi";
+                            break;
+                        case "Mohammed Salah" :
+                            personName="mohammed_salah";
+                            break;
+                        case "Son Heung Min" :
+                            personName="son_heung_min";
+                            break;
+                        
+                        
+                    }
                     let elementName = "#score_" + personName;
-                    $(elementName).html(proabilityScore);
+                    $(elementName).html(probabilityScore);
                 }
             }
                        
